@@ -49,7 +49,7 @@ then
  if [ "$current_domain_resolution" != "$current_ip_address" ];
  then
   echo "INFO: Your domain is being updated to reflect your new IP address, $current_ip_address"   
-  legitdns_update_url="http://www.legitdns.com/api/v0/update.php?domain=$legitdns_domain&token=$legitdns_secret_token"
+  legitdns_update_url="https://www.legitdns.com/api/v0/update.php?domain=$legitdns_domain&token=$legitdns_secret_token"
   legitdns_update=$(curl -s $legitdns_update_url)
   if [[ $legitdns_update =~ .*SUCCESS.* ]]
    then
