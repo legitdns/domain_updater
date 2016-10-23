@@ -20,7 +20,7 @@ legitdns_secret_token="d16e72f6-2d1c-a9f1-8f2d-6664db186063"
 #####################################################
 
 legitdns_temp_file="/tmp/.legitdns_lock_file"
-legitdns_update_window=300
+legitdns_update_window=600
 
 
 ## Check dependencies:
@@ -35,7 +35,6 @@ else
  echo "INFO: Lockfile does not exist. Creating at $legitdns_temp_file"
  touch $legitdns_temp_file
  time_last_checked=0
- #time_last_checked=$(stat -c %Y $legitdns_temp_file)
 fi
 
 time_right_now=$(date +%s)
